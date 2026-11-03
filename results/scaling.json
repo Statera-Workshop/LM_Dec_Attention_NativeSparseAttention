@@ -1,0 +1,79 @@
+{
+ "model": "nsa",
+ "repo": "(new) lucidrains/native-sparse-attention-pytorch 0.2.3",
+ "target_repo": "LM_Dec_Attention_NativeSparseAttention",
+ "category": "Attention",
+ "upstream": "lucidrains/native-sparse-attention-pytorch (MIT), pip 0.2.3",
+ "unified": [
+  "sliding window 64, compress block 16, select 4 blocks of 16, kv heads 4; pure PyTorch path (flex attention and Triton kernels are not available on Windows)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-26 18:14:46",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 690.9,
+    "ms": 71.4,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 119.9,
+    "ms": 35.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 1807.3,
+    "ms": 81.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 187.1,
+    "ms": 32.6,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 5616.7,
+    "ms": 166.6,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 321.5,
+    "ms": 33.4,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 19518.9,
+    "ms": 13565.1,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 607.4,
+    "ms": 43.9,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 8192,
+   "train": "OOM",
+   "infer": {
+    "peak_mb": 1218.2,
+    "ms": 96.4,
+    "dtype": "bf16"
+   }
+  }
+ ],
+ "seconds": 61.7
+}

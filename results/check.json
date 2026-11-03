@@ -1,0 +1,40 @@
+{
+ "model": "nsa",
+ "repo": "(new) lucidrains/native-sparse-attention-pytorch 0.2.3",
+ "target_repo": "LM_Dec_Attention_NativeSparseAttention",
+ "category": "Attention",
+ "upstream": "lucidrains/native-sparse-attention-pytorch (MIT), pip 0.2.3",
+ "unified": [
+  "sliding window 64, compress block 16, select 4 blocks of 16, kv heads 4; pure PyTorch path (flex attention and Triton kernels are not available on Windows)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-26 18:08:46",
+ "smoke": false,
+ "params": 31094352,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 2.4163756370544434,
+  "logit_scale": 2.4676158891448976,
+  "length": 256,
+  "positions": [
+   17,
+   63,
+   100,
+   130,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 3.0
+}

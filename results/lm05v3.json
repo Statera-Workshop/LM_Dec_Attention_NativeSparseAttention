@@ -1,0 +1,74 @@
+{
+ "model": "nsa",
+ "repo": "(new) lucidrains/native-sparse-attention-pytorch 0.2.3",
+ "target_repo": "LM_Dec_Attention_NativeSparseAttention",
+ "category": "Attention",
+ "upstream": "lucidrains/native-sparse-attention-pytorch (MIT), pip 0.2.3",
+ "unified": [
+  "sliding window 64, compress block 16, select 4 blocks of 16, kv heads 4; pure PyTorch path (flex attention and Triton kernels are not available on Windows)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v3",
+ "started": "2026-10-26 21:00:49",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 1,
+   "distinct": true,
+   "steps": 220,
+   "capped": true,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 4.220427989959717,
+   "minutes": 71.0,
+   "history": [],
+   "test": {
+    "512": {
+     "normal": 0.015625,
+     "keys": 0.017578125,
+     "values": 0.017578125,
+     "true_recall": -0.001953125
+    },
+    "2048": {
+     "normal": 0.01953125,
+     "keys": 0.01953125,
+     "values": 0.01953125,
+     "true_recall": 0.0
+    }
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": null
+  },
+  "16": {
+   "queries": 4,
+   "distinct": true,
+   "steps": 211,
+   "capped": true,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 4.224252223968506,
+   "minutes": 72.0,
+   "history": [],
+   "test": {
+    "512": {
+     "normal": 0.01708984375,
+     "keys": 0.0166015625,
+     "values": 0.0166015625,
+     "true_recall": 0.00048828125
+    },
+    "2048": {
+     "normal": 0.00830078125,
+     "keys": 0.0185546875,
+     "values": 0.01904296875,
+     "true_recall": -0.01025390625
+    }
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": null
+  }
+ },
+ "seconds": 8620.4
+}
