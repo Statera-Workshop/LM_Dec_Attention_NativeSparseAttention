@@ -8,43 +8,197 @@
   "sliding window 64, compress block 16, select 4 blocks of 16, kv heads 4; pure PyTorch path (flex attention and Triton kernels are not available on Windows)"
  ],
  "torch": "2.5.1+cu124",
- "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "gpu": "NVIDIA GeForce RTX 4090",
  "stage": "lm02",
- "started": "2026-10-27 03:02:50",
+ "started": "2026-11-24 21:54:45",
  "smoke": false,
  "params": 31094352,
  "micro_batch": null,
- "steps": 2839,
- "tokens": 23257088,
+ "steps": 24415,
+ "tokens": 200007680,
  "budget_tokens": 200000000,
- "capped": true,
+ "capped": false,
  "bf16": true,
- "hours": 4.029,
- "valid_bpc": 1.950541686071684,
- "test_bpc": 1.9283512160853142,
+ "hours": 0.911,
+ "valid_bpc": 1.4902736374492271,
+ "test_bpc": 1.4802652623682677,
  "valid_tokens": 4915200,
  "test_tokens": 4915200,
  "history": [
   {
    "step": 1000,
    "tokens": 8192000,
-   "train_bpc": 2.940285870245646,
-   "valid_bpc": 2.2762766437876394,
-   "hours": 1.409958342909813
+   "train_bpc": 2.940021915228703,
+   "valid_bpc": 2.2762286193522123,
+   "hours": 0.03682292878627777
   },
   {
    "step": 2000,
    "tokens": 16384000,
-   "train_bpc": 2.122203369640124,
-   "valid_bpc": 2.0536739746931603,
-   "hours": 2.819885609878434
+   "train_bpc": 2.1221967916476943,
+   "valid_bpc": 2.05431508989922,
+   "hours": 0.07370783891942766
   },
   {
-   "step": 2839,
-   "tokens": 23257088,
-   "train_bpc": 1.9792401988392867,
-   "valid_bpc": 1.9613785374832275,
-   "hours": 4.003160935640335
+   "step": 3000,
+   "tokens": 24576000,
+   "train_bpc": 1.9694672298181735,
+   "valid_bpc": 1.948201665329879,
+   "hours": 0.11063036666976081
+  },
+  {
+   "step": 4000,
+   "tokens": 32768000,
+   "train_bpc": 1.8763745931715292,
+   "valid_bpc": 1.8731399130331725,
+   "hours": 0.14755662004152933
+  },
+  {
+   "step": 5000,
+   "tokens": 40960000,
+   "train_bpc": 1.806132249302145,
+   "valid_bpc": 1.8275025073692392,
+   "hours": 0.18447841624418895
+  },
+  {
+   "step": 6000,
+   "tokens": 49152000,
+   "train_bpc": 1.7523306823923621,
+   "valid_bpc": 1.7736833633165903,
+   "hours": 0.2214006306727727
+  },
+  {
+   "step": 7000,
+   "tokens": 57344000,
+   "train_bpc": 1.6988760895347905,
+   "valid_bpc": 1.726297790122993,
+   "hours": 0.2583226693338818
+  },
+  {
+   "step": 8000,
+   "tokens": 65536000,
+   "train_bpc": 1.6506062755389757,
+   "valid_bpc": 1.6901034332902443,
+   "hours": 0.2952592492103577
+  },
+  {
+   "step": 9000,
+   "tokens": 73728000,
+   "train_bpc": 1.6179713345081421,
+   "valid_bpc": 1.6695133246438205,
+   "hours": 0.33218671792083315
+  },
+  {
+   "step": 10000,
+   "tokens": 81920000,
+   "train_bpc": 1.5940957450579931,
+   "valid_bpc": 1.6468436000633373,
+   "hours": 0.3691170432170232
+  },
+  {
+   "step": 11000,
+   "tokens": 90112000,
+   "train_bpc": 1.569503244723844,
+   "valid_bpc": 1.6314651754165537,
+   "hours": 0.4060430671109094
+  },
+  {
+   "step": 12000,
+   "tokens": 98304000,
+   "train_bpc": 1.549798751193001,
+   "valid_bpc": 1.6133712255444927,
+   "hours": 0.4429708056317435
+  },
+  {
+   "step": 13000,
+   "tokens": 106496000,
+   "train_bpc": 1.5407248409361316,
+   "valid_bpc": 1.6048877427349248,
+   "hours": 0.4798991335100598
+  },
+  {
+   "step": 14000,
+   "tokens": 114688000,
+   "train_bpc": 1.5260831135193564,
+   "valid_bpc": 1.5897704599848648,
+   "hours": 0.5168263319465849
+  },
+  {
+   "step": 15000,
+   "tokens": 122880000,
+   "train_bpc": 1.5079952824460474,
+   "valid_bpc": 1.5778603441046246,
+   "hours": 0.5537531464629704
+  },
+  {
+   "step": 16000,
+   "tokens": 131072000,
+   "train_bpc": 1.501469963228318,
+   "valid_bpc": 1.5711745426299037,
+   "hours": 0.5906795350048277
+  },
+  {
+   "step": 17000,
+   "tokens": 139264000,
+   "train_bpc": 1.490588897542322,
+   "valid_bpc": 1.5586485164610009,
+   "hours": 0.6276070484187868
+  },
+  {
+   "step": 18000,
+   "tokens": 147456000,
+   "train_bpc": 1.472692703899156,
+   "valid_bpc": 1.5509161068252355,
+   "hours": 0.6645405219660865
+  },
+  {
+   "step": 19000,
+   "tokens": 155648000,
+   "train_bpc": 1.4699476133083509,
+   "valid_bpc": 1.5445974986290658,
+   "hours": 0.7014624377091726
+  },
+  {
+   "step": 20000,
+   "tokens": 163840000,
+   "train_bpc": 1.4554392422709506,
+   "valid_bpc": 1.535352585850461,
+   "hours": 0.7383848247263166
+  },
+  {
+   "step": 21000,
+   "tokens": 172032000,
+   "train_bpc": 1.4518600571493094,
+   "valid_bpc": 1.5266832431099324,
+   "hours": 0.7753099587890837
+  },
+  {
+   "step": 22000,
+   "tokens": 180224000,
+   "train_bpc": 1.4422484458002487,
+   "valid_bpc": 1.5244134883165583,
+   "hours": 0.8122395584980647
+  },
+  {
+   "step": 23000,
+   "tokens": 188416000,
+   "train_bpc": 1.435226768743734,
+   "valid_bpc": 1.5164472364501544,
+   "hours": 0.8491646774609883
+  },
+  {
+   "step": 24000,
+   "tokens": 196608000,
+   "train_bpc": 1.4276916257882477,
+   "valid_bpc": 1.5104430968112612,
+   "hours": 0.886096317105823
+  },
+  {
+   "step": 24415,
+   "tokens": 200007680,
+   "train_bpc": 1.4251104244442157,
+   "valid_bpc": 1.5079040146068965,
+   "hours": 0.9018925084670385
   }
  ],
  "prime": [
@@ -177,6 +331,6 @@
   110,
   101
  ],
- "sample": " of the [[construction]] of the [[construction]] of the [[continuous control]] of the [[continuous control]] of the [[continuous control]] of the [[continue control]] of the [[continue control]] of the [[continental construction]] of the [[continue control",
- "seconds": 14514.3
+ "sample": " of the most common crops is the [[computer science]].  The computer system is the [[computer science]] of the [[computer system]] and the [[computer system]] of the [[computer system]].  The computer system is a computer system that contains a simple comp",
+ "seconds": 3282.4
 }
